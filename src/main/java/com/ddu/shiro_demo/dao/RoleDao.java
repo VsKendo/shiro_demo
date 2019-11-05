@@ -15,6 +15,7 @@ public class RoleDao {
         db = new HashSet<>();
         db.add(new Role("r001","admin"));
         db.add(new Role("r002","guest"));
+        db.add(new Role("r003","guest"));
     }
 
     /**

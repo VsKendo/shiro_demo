@@ -3,7 +3,7 @@ package com.ddu.shiro_demo.bean;
 /**
  * 中间表 角色对应的权限
  */
-public class RPermission {
+public class  RPermission {
     /**
      * id
      */

@@ -20,7 +20,7 @@ public class UserDaoTest extends BaseTest {
     public void testGetOne(){
         String id = "u001";
 //        String id = "u006";
-        System.out.println(userDao.getOne(id));
+     //   System.out.println(userDao.getOne(id));
     }
 
 }

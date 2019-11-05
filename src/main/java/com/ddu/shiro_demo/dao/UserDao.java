@@ -14,8 +14,9 @@ public class UserDao {
 
     static {
         db = new HashSet<>();
-        db.add(new User("u001", "user01", "123456"));
-        db.add(new User("u002", "user02", "123456"));
+        //秘钥如何生成？ shiroDemoApplication里有
+        db.add(new User("u001", "user01", "0099f404345259869d8f0d25158371b0"));
+        db.add(new User("u002", "user02", "74408d5e536e1ec2535ba254e2474160"));
         db.add(new User("u003", "user03", "123456"));
     }
 
@@ -31,12 +32,12 @@ public class UserDao {
     /**
      * 单条查询
      *
-     * @param id 用户id
+     * @param username 用户id
      * @return
      */
-    public User getOne(String id) {
+    public User getUser(String username) {
         for (User user : db) {
-            if (user.getId().equals(id)) {
+            if (user.getName().equals(username)) {
                 return user;
             }
         }
