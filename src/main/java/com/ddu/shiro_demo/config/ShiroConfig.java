@@ -60,8 +60,9 @@ return authorizationAttributeSourceAdvisor;
     public CustomRealm myShiroRealm() {
         CustomRealm customRealm = new CustomRealm();
         //替换当前 Realm 的 credentialsMatcher 属性. 使用 HashedCredentialsMatcher 对象, 并设置加密算法即可.
+		//MD5 sha-256 注意，后者为默认
         HashedCredentialsMatcher hashedCredentialsMatcher = new  HashedCredentialsMatcher("MD5");
-        //循环加密两次
+        //循环加密两次b
         hashedCredentialsMatcher.setHashIterations(2);
         customRealm.setCredentialsMatcher(hashedCredentialsMatcher);
         return customRealm;
@@ -88,10 +89,10 @@ return authorizationAttributeSourceAdvisor;
     }
 
     public SimpleCookie rememberMeCookie(){
-        //这个参数是cookie的名称，对应前端的checkbox的name = rememberMe
-        SimpleCookie simpleCookie = new SimpleCookie("rememberMe");
-        //cookie生效时间30天,单位秒;一时3600;一天86400;一月2592000;不要用一年
-        simpleCookie.setMaxAge(2592000);
+            //这个参数是cookie的名称，对应前端的checkbox的name = rememberMe
+            SimpleCookie simpleCookie = new SimpleCookie("rememberMe");
+            //cookie生效时间30天,单位秒;一时3600;一天86400;一月2592000;不要用一年
+            simpleCookie.setMaxAge(2592000);
         return simpleCookie;
     }
 

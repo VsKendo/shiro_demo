@@ -31,6 +31,7 @@ public class MyLogoutFilter extends LogoutFilter {
         map.put("data","sd/index.jsp");
         JSONObject json = new JSONObject(map);
         makeJson.setStatusAndOutputJson(httpServletResponse,json);
+		//return true if you need to access the function
         return false;
     }
 
